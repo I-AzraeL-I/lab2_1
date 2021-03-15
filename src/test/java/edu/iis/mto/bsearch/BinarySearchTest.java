@@ -56,8 +56,19 @@ class BinarySearchTest {
     }
 
     @Test
-    void sequenceLengthMoreThanOneAndElementCenterOfSequence() {
+    void sequenceLengthMoreThanOneAndOddAndElementCenterOfSequence() {
         int[] seq = {1, 2, 3};
+        int CENTER = seq.length / 2;
+        int key = seq[CENTER];
+
+        SearchResult result = BinarySearch.search(key, seq);
+        assertTrue(result.isFound());
+        assertEquals(CENTER, result.getPosition());
+    }
+
+    @Test
+    void sequenceLengthMoreThanOneAndEvenAndElementCenterOfSequence() {
+        int[] seq = {1, 2};
         int CENTER = seq.length / 2;
         int key = seq[CENTER];
 
