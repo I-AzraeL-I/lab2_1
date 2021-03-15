@@ -1,6 +1,5 @@
 package edu.iis.mto.bsearch;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -11,11 +10,8 @@ class BinarySearchTest {
     int NOT_FOUND = -1;
     int FIRST = 0;
 
-    @BeforeEach
-    void setUp() throws Exception {}
-
     @Test
-    void sequenceLengthEqualsOneAndElementInSequence() {
+    public void sequenceLengthEqualsOneAndElementInSequence() {
         int[] seq = {5};
         int key = 5;
 
@@ -25,7 +21,7 @@ class BinarySearchTest {
     }
 
     @Test
-    void sequenceLengthEqualsOneAndElementNotInSequence() {
+    public void sequenceLengthEqualsOneAndElementNotInSequence() {
         int[] seq = {5};
         int key = 1;
 
@@ -35,7 +31,7 @@ class BinarySearchTest {
     }
 
     @Test
-    void sequenceLengthMoreThanOneAndElementFirstInSequence() {
+    public void sequenceLengthMoreThanOneAndElementFirstInSequence() {
         int[] seq = {1, 2, 3};
         int key = seq[0];
 
@@ -45,7 +41,7 @@ class BinarySearchTest {
     }
 
     @Test
-    void sequenceLengthMoreThanOneAndElementLastInSequence() {
+    public void sequenceLengthMoreThanOneAndElementLastInSequence() {
         int[] seq = {1, 2, 3};
         int LAST = seq.length - 1;
         int key = seq[LAST];
@@ -56,7 +52,7 @@ class BinarySearchTest {
     }
 
     @Test
-    void sequenceLengthMoreThanOneAndOddAndElementCenterOfSequence() {
+    public void sequenceLengthMoreThanOneAndOddAndElementCenterOfSequence() {
         int[] seq = {1, 2, 3};
         int CENTER = seq.length / 2;
         int key = seq[CENTER];
@@ -67,7 +63,7 @@ class BinarySearchTest {
     }
 
     @Test
-    void sequenceLengthMoreThanOneAndEvenAndElementCenterOfSequence() {
+    public void sequenceLengthMoreThanOneAndEvenAndElementCenterOfSequence() {
         int[] seq = {1, 2};
         int CENTER = seq.length / 2;
         int key = seq[CENTER];
@@ -78,7 +74,7 @@ class BinarySearchTest {
     }
 
     @Test
-    void sequenceLengthMoreThanOneAndElementNotInSequence() {
+    public void sequenceLengthMoreThanOneAndElementNotInSequence() {
         int[] seq = {1, 2, 3};
         int key = 4;
 
@@ -88,7 +84,7 @@ class BinarySearchTest {
     }
 
     @Test
-    void IllegalArgumentExceptionThrown() {
+    public void IllegalArgumentExceptionThrown() {
         int[] seq = {};
         int key = 2;
 
