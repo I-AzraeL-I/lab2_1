@@ -1,10 +1,9 @@
 package edu.iis.mto.bsearch;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 
 class BinarySearchTest {
@@ -20,6 +19,17 @@ class BinarySearchTest {
         SearchResult result = BinarySearch.search(key, seq);
         assertTrue(result.isFound());
         assertEquals(key, seq[result.getPosition()]);
+    }
+
+    @Test
+    void SequenceLengthEqualsOneAndElementNotInSequence() {
+        int[] seq = {5};
+        int key = 1;
+        int NOT_FOUND = -1;
+
+        SearchResult result = BinarySearch.search(key, seq);
+        assertFalse(result.isFound());
+        assertEquals(NOT_FOUND, result.getPosition());
     }
 
 }
